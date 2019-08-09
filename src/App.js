@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Button from './Components/Button';
 
-function App() {
+class App extends Component {
+  nextQuoteClickHandler() {
+    console.log('hi');
+  }
+
+  render() {
   return (
     <div className="App" id="quote-box">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is Sparta!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button buttonDisplayName="Next Quote" clickHandler={this.nextQuoteClickHandler} />
     </div>
   );
+}
 }
 
 export default App;
